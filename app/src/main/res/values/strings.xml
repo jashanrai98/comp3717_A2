@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Rai_A2</string>
     <string name="homepage_Names_jashan">Jashan Rai (A01185336)</string>
-    <string name="homepage_Names_lillian">Lillian (A01185336)</string>
+    <string name="homepage_Names_lillian">Lillian Xu (A01233266)</string>
+    <string name="button_month_year">Cases by Month and Year</string>
+    <string name="button_health_authority">Cases by Health Authority</string>
+    <string name="button_gender">Cases by Gender</string>
+    <string name="button_age_group">Cases by Age Group</string>
+
 </resources>
