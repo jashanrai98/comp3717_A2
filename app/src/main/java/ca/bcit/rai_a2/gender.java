@@ -1,17 +1,14 @@
 package ca.bcit.rai_a2;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,60 +17,76 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class gender extends AppCompatActivity {
-    ListView listView = (ListView) findViewById(R.id.listView);
-    final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("copm3717-a2-default-rtdb");
-    ArrayList<Post> list;
-    ArrayAdapter<Post> adapter;
 
+    DatabaseReference databasePost;
+    RelativeLayout lvPosts;
+    List<Post> postList = new ArrayList<>();;
+    int femaleCount;
+    int maleCount;
+    int unknownCount;
+    TextView tvSexM;
+    TextView tvSexF;
+    TextView tvSexU;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gender);
-        // Attach a listener to read the data at our posts reference
-        list = new ArrayList<>();
-        //adapter = new ArrayAdapter<Post>(this, )
-        ref.addValueEventListener(new ValueEventListener() {
+        databasePost = FirebaseDatabase.getInstance().getReference();
+        femaleCount = 0;
+        maleCount = 0;
+        unknownCount = 0;
+         tvSexM = findViewById(R.id.maleCountValue);
+         tvSexF = findViewById(R.id.femaleCountValue);
+         tvSexU = findViewById(R.id.unknownCountValue);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        lvPosts = (RelativeLayout) findViewById(R.id.lvPosts);
+        Query myquery = databasePost.limitToFirst(150);
+        Query male = databasePost;
+        databasePost.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()){
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.v("Async101", "Done loading bookmarks");
+                postList.clear();
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    Post post = postSnapshot.getValue(Post.class);
+                    postList.add(post);
+                    Log.v("Async102", post.getSex().toString());
 
                 }
-                Post post = dataSnapshot.getValue(Post.class);
-                System.out.println(post);
+                //PostListAdapter adapter = new PostListAdapter(gender.this, postList);
+                //lvPosts.setAdapter(adapter);
+                updateGenderCount(postList);
+                tvSexM.setText(String.valueOf(maleCount));
+                tvSexF.setText(String.valueOf(femaleCount));
+                tvSexU.setText(String.valueOf(unknownCount));
+
             }
-
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-                System.out.println("The read failed: " + databaseError.getCode());
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
-        });
-        ref.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
-                Post newPost = dataSnapshot.getValue(Post.class);
-                System.out.println("Age Group: " + newPost.ageGroup);
-                System.out.println("Classification Reported: " + newPost.classificationReported);
-                System.out.println("Health Authority: " + newPost.healthAuthority);
-                System.out.println("Reported Data: " + newPost.reportedDate);
-                System.out.println("Sex: " + newPost.sex);
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String prevChildKey) {}
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {}
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String prevChildKey) {}
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {}
         });
     }
 
+    public void updateGenderCount(List<Post> p){
+        for (int i = 0; i < p.size(); i++){
+            if (p.get(i).getSex().equals("M")){
+                maleCount++;
+            } else if (p.get(i).getSex().equals("F")){
+                femaleCount++;
+            } else {
+                unknownCount++;
+            }
+        }
+
+    }
 
 }
