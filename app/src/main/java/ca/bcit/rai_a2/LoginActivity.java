@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-    public void onSignInClick(View view) {
+    public void onLoginInClick(View view) {
         checkData();
         signIn(email, password);
         Intent i = new Intent(this, MainActivity.class);
