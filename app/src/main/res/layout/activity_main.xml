@@ -55,7 +55,15 @@
         android:id="@+id/button4"
         android:layout_width="261dp"
         android:layout_height="45dp"
+        android:onClick="startAgeGroup"
         android:text="@string/button_age_group"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="525dp" />
+    <Button
+        android:id="@+id/tvLogout"
+        android:layout_width="261dp"
+        android:layout_height="45dp"
+        android:text="logout"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="525dp" />
 
