@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class age_group extends AppCompatActivity {
-
+    ProgressBar progressBar;
     DatabaseReference databasePost;
     RelativeLayout lvPosts;
     List<Post> postList = new ArrayList<>();
@@ -76,7 +78,8 @@ public class age_group extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        progressBar = findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.VISIBLE);
         lvPosts = (RelativeLayout) findViewById(R.id.lvPosts);
         Query myquery = databasePost;
         myquery.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -100,6 +103,7 @@ public class age_group extends AppCompatActivity {
                 tvAgeGroup4.setText(String.valueOf(ageCount8));
                 tvAgeGroup1.setText(String.valueOf(ageCount9));
                 tvAgeGroup2.setText(String.valueOf(ageCount10));
+                progressBar.setVisibility(View.GONE);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

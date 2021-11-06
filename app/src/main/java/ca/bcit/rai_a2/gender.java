@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -20,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class gender extends AppCompatActivity {
-
+    ProgressBar progressBar;
     DatabaseReference databasePost;
     RelativeLayout lvPosts;
     List<Post> postList = new ArrayList<>();;
@@ -38,36 +40,37 @@ public class gender extends AppCompatActivity {
         femaleCount = 0;
         maleCount = 0;
         unknownCount = 0;
-         tvSexM = findViewById(R.id.maleCountValue);
-         tvSexF = findViewById(R.id.femaleCountValue);
-         tvSexU = findViewById(R.id.unknownCountValue);
+        tvSexM = findViewById(R.id.maleCountValue);
+        tvSexF = findViewById(R.id.femaleCountValue);
+        tvSexU = findViewById(R.id.unknownCountValue);
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
+        progressBar = findViewById(R.id.progressBar3);
+        progressBar.setVisibility(View.VISIBLE);
+        RelativeLayout insideContainer = findViewById(R.id.insideContainerGender);
+        insideContainer.setVisibility(View.GONE);
         lvPosts = (RelativeLayout) findViewById(R.id.lvPosts);
-        Query myquery = databasePost.limitToFirst(150);
-        Query male = databasePost;
         databasePost.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Log.v("Async101", "Done loading bookmarks");
+
                 postList.clear();
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     Post post = postSnapshot.getValue(Post.class);
                     postList.add(post);
-                    Log.v("Async102", post.getSex().toString());
 
                 }
-                //PostListAdapter adapter = new PostListAdapter(gender.this, postList);
-                //lvPosts.setAdapter(adapter);
+
                 updateGenderCount(postList);
                 tvSexM.setText(String.valueOf(maleCount));
                 tvSexF.setText(String.valueOf(femaleCount));
                 tvSexU.setText(String.valueOf(unknownCount));
-
+                progressBar.setVisibility(View.GONE);
+                insideContainer.setVisibility(View.VISIBLE);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
