@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (password.length() <6) {
+                if (password.length() < 6) {
                     editEmail.setError("Password must be >= 6 characters.");
                     return;
                 }
@@ -109,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (password.length() <6) {
+                if (password.length() < 6) {
                     editEmail.setError("Password must be >= 6 characters.");
                     return;
                 }
@@ -129,30 +129,10 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
-    }
-    public void onLoginInClick(View view) {
-        checkData();
-        signIn(email, password);
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
-    public void onRegisterClick(View view) {
-        checkData();
-        createAccount(email, password);
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
-    private void reload() {
-    }
-
-    private void updateUI(FirebaseUser user) {
-
             }
         });
     }
 }
-
-
 //
 //
 //    EditText email;
