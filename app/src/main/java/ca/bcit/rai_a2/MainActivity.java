@@ -56,4 +56,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, age_group.class);
         startActivity(intent);
     }
+    public void startHA(View view) {
+        Intent intent = new Intent(this, health_authority.class);
+        startActivity(intent);
+    }
 }

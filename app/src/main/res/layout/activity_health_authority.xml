@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".health_authority">
+    android:id="@+id/lvPosts">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/insideContainer">
+    <TextView
+        android:id="@+id/fraser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Fraser: "
+        android:textSize="24sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/interior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fraser"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="false"
+        android:text="Interior: "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/northern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interior"
+        android:layout_centerInParent="true"
+        android:text="Northern: "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/outside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/northern"
+        android:layout_centerInParent="true"
+        android:text="Out of Canada: "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/coastal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outside"
+        android:layout_centerInParent="true"
+        android:text="Vancouver Coastal: "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/island"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coastal"
+        android:layout_centerInParent="true"
+        android:text="Vancouver Island: "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/fraserCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fraser"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/interiorCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fraserCount"
+        android:layout_toRightOf="@id/interior"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/northernCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interiorCount"
+        android:layout_toRightOf="@id/northern"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/outsideCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/northernCount"
+        android:layout_toRightOf="@id/outside"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/coastalCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outsideCount"
+        android:layout_toRightOf="@id/coastal"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/islandCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coastalCount"
+        android:layout_toRightOf="@id/island"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="173dp"
+        android:layout_height="164dp" />
+
+</RelativeLayout>

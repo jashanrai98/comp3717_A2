@@ -51,29 +51,26 @@ public class gender extends AppCompatActivity {
         super.onStart();
         progressBar = findViewById(R.id.progressBar3);
         progressBar.setVisibility(View.VISIBLE);
-
+        RelativeLayout insideContainer = findViewById(R.id.insideContainerGender);
+        insideContainer.setVisibility(View.GONE);
         lvPosts = (RelativeLayout) findViewById(R.id.lvPosts);
-        Query myquery = databasePost.limitToFirst(150);
-        Query male = databasePost;
         databasePost.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Log.v("Async101", "Done loading bookmarks");
+
                 postList.clear();
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     Post post = postSnapshot.getValue(Post.class);
                     postList.add(post);
-                    Log.v("Async102", post.getSex().toString());
 
                 }
-                //PostListAdapter adapter = new PostListAdapter(gender.this, postList);
-                //lvPosts.setAdapter(adapter);
+
                 updateGenderCount(postList);
                 tvSexM.setText(String.valueOf(maleCount));
                 tvSexF.setText(String.valueOf(femaleCount));
                 tvSexU.setText(String.valueOf(unknownCount));
                 progressBar.setVisibility(View.GONE);
-
+                insideContainer.setVisibility(View.VISIBLE);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

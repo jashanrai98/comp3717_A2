@@ -40,7 +40,8 @@
         android:layout_height="wrap_content"
         android:text="@string/button_health_authority"
         tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="391dp" />
+        tools:layout_editor_absoluteY="391dp"
+        android:onClick="startHA"/>
 
     <Button
         android:id="@+id/button3"
