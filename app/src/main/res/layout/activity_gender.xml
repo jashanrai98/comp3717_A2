@@ -8,15 +8,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
         android:id="@+id/insideContainerGender">
+
         <TextView
             android:id="@+id/maleCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="Male: "
-            android:textSize="24sp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"/>
+            android:textSize="24sp" />
 
 
         <TextView
@@ -24,22 +23,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/maleCount"
+            android:layout_centerInParent="true"
             android:text="Female: "
-            android:textSize="24sp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"/>
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/unknownCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/femaleCount"
+            android:layout_centerInParent="true"
             android:text="Unknown: "
-            android:textSize="24sp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"/>
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/maleCountValue"
@@ -72,11 +67,12 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_centerInParent="true"/>
-        </RelativeLayout>
+
         <ProgressBar
             android:id="@+id/progressBar3"
             style="?android:attr/progressBarStyle"
             android:layout_width="173dp"
             android:layout_height="164dp" />
+</RelativeLayout>
 
 </RelativeLayout>

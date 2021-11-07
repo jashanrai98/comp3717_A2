@@ -6,8 +6,16 @@
     <string name="button_health_authority">Cases by Health Authority</string>
     <string name="button_gender">Cases by Gender</string>
     <string name="button_age_group">Cases by Age Group</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="button_find">Find</string>
     <string name="login_Email">Email</string>
     <string name="login_password">Password</string>
     <string name="button_login">Login</string>
     <string name="button_signup">Signup</string>
+    <string name="date">Reported_Date</string>
+    <string name="ha">HA</string>
+    <string name="sex">Sex</string>
+    <string name="age">Age_Group</string>
+    <string name="classification">Classification_Reported</string>
 </resources>

@@ -32,7 +32,8 @@
         android:layout_height="47dp"
         android:text="@string/button_month_year"
         tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="308dp" />
+        tools:layout_editor_absoluteY="308dp"
+        android:onClick="startMonthYear"/>
 
     <Button
         android:id="@+id/button2"

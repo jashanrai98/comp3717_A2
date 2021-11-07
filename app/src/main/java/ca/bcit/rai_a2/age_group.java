@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -23,7 +24,7 @@ import java.util.List;
 public class age_group extends AppCompatActivity {
     ProgressBar progressBar;
     DatabaseReference databasePost;
-    RelativeLayout lvPosts;
+    LinearLayout lvPosts;
     List<Post> postList = new ArrayList<>();
     int ageCount1;
     int ageCount2;
@@ -80,7 +81,7 @@ public class age_group extends AppCompatActivity {
         super.onStart();
         progressBar = findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.VISIBLE);
-        lvPosts = (RelativeLayout) findViewById(R.id.lvPosts);
+        lvPosts = (LinearLayout) findViewById(R.id.lvPosts);
         Query myquery = databasePost;
         myquery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -90,8 +91,7 @@ public class age_group extends AppCompatActivity {
                     Post post = postSnapshot.getValue(Post.class);
                     postList.add(post);
                 }
-                //PostListAdapter adapter = new PostListAdapter(gender.this, postList);
-                //lvPosts.setAdapter(adapter);
+
                 updateAgeGroupCount(postList);
                 tvAgeGroup1.setText(String.valueOf(ageCount1));
                 tvAgeGroup2.setText(String.valueOf(ageCount2));
