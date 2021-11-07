@@ -14,7 +14,7 @@
             android:id="@+id/maleCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50pt"
+            android:layout_marginStart="50pt"
             android:layout_marginTop="80pt"
             android:text="Male: "
             android:textSize="24sp" />
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/maleCount"
-            android:layout_marginLeft="50pt"
+            android:layout_marginStart="50pt"
             android:layout_marginTop="4pt"
             android:text="Female: "
             android:textSize="24sp" />
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/femaleCount"
-            android:layout_marginLeft="50pt"
+            android:layout_marginStart="50pt"
             android:layout_marginTop="4pt"
             android:text="Unknown: "
             android:textSize="24sp" />
@@ -44,9 +44,9 @@
             android:id="@+id/maleCountValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="80pt"
-            android:layout_toRightOf="@id/maleCount"
+            android:layout_toEndOf="@id/maleCount"
             android:textSize="24sp" />
 
         <TextView
@@ -54,9 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/maleCountValue"
-            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
             android:layout_marginTop="4pt"
-            android:layout_toRightOf="@id/femaleCount"
+            android:layout_toEndOf="@id/femaleCount"
             android:textSize="24sp" />
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/femaleCountValue"
             android:layout_marginTop="4pt"
-            android:layout_toRightOf="@id/unknownCount"
+            android:layout_toEndOf="@id/unknownCount"
             android:textSize="24sp" />
     </RelativeLayout>
         <ProgressBar
