@@ -6,13 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -53,6 +51,7 @@ public class month_Year extends AppCompatActivity {
                 lvPosts = (LinearLayout) findViewById(R.id.lvPosts);
                 editYear.getText().toString();
                 editMonth.getText().toString();
+                updateMonthYearCount(postList);
             }
         });
     }
@@ -67,7 +66,7 @@ public class month_Year extends AppCompatActivity {
                 int a = 0;
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     a++;
-                    if(a>=1000){
+                    if(a>=100){
                         break;
                     }
                     Post post = postSnapshot.getValue(Post.class);

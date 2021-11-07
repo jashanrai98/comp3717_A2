@@ -16,12 +16,14 @@
             android:id="@+id/lessThan10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Less than 10: " />
+            android:text="@string/Less10"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/lessThan10Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -33,13 +35,14 @@
             android:id="@+id/TenTo19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lessThan10"
-            android:text="10 - 19: " />
+            android:text="@string/tenTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/TenTo19Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -51,12 +54,14 @@
             android:id="@+id/TwentyTo29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20 - 29: " />
+            android:text="@string/twentyTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/TwentyTo29Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -68,13 +73,14 @@
             android:id="@+id/ThirtyTo39"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/TwentyTo29"
-            android:text="30 - 39:" />
+            android:text="@string/thirtyTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/ThirtyTo39Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,13 +92,14 @@
             android:id="@+id/FortyTo49"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ThirtyTo39"
-            android:text="40 - 49: " />
+            android:text="@string/fortyTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/FortyTo49Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,13 +111,14 @@
             android:id="@+id/FiftyTo59"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/FortyTo49"
-            android:text="50 - 59: " />
+            android:text="@string/fiftyTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/FiftyTo59Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -123,13 +131,14 @@
             android:id="@+id/SixtyTo69"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/FiftyTo59"
-            android:text="60 - 69: " />
+            android:text="@string/sixtyTo"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/SixtyTo69Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -142,13 +151,14 @@
             android:id="@+id/SeventyTo79"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/SixtyTo69"
-            android:text="70 - 79: " />
+            android:text="@string/seventyTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/SeventyTo79Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -161,13 +171,14 @@
             android:id="@+id/EightyTo89"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/SeventyTo79"
-            android:text="80 - 89: " />
+            android:text="@string/eightyTo"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/EightyTo89Value"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -179,12 +190,14 @@
             android:id="@+id/NinetyPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="90+: " />
+            android:text="@string/ninetyTo"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/NinetyPlusValue"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <ProgressBar
@@ -192,6 +205,7 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="163dp"
         android:layout_height="110dp"
-        android:layout_marginHorizontal="20pt"/>
+        android:layout_marginHorizontal="20pt"
+        android:indeterminateDrawable="@drawable/progressb"/>
 
 </LinearLayout>

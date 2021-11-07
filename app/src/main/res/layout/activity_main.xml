@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_marginTop="60pt">
 
 
     <TextView
@@ -14,8 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/homepage_Names_jashan"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="93dp" />
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:text="@string/homepage_Names_lillian"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="155dp" />
+        android:layout_gravity="center"
+        android:layout_marginVertical="5pt"/>
 
     <Button
         android:id="@+id/button"
@@ -33,16 +33,17 @@
         android:text="@string/button_month_year"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="308dp"
-        android:onClick="startMonthYear"/>
+        android:onClick="startMonthYear"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_health_authority"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="391dp"
-        android:onClick="startHA"/>
+        android:onClick="startHA"
+        android:layout_gravity="center"
+        android:layout_marginVertical="5pt"/>
 
     <Button
         android:id="@+id/button3"
@@ -50,8 +51,7 @@
         android:layout_height="45dp"
         android:onClick="startGender"
         android:text="@string/button_gender"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="456dp" />
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/button4"
@@ -59,14 +59,13 @@
         android:layout_height="45dp"
         android:onClick="startAgeGroup"
         android:text="@string/button_age_group"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="525dp" />
+        android:layout_gravity="center"
+        android:layout_marginVertical="5pt"/>
     <Button
         android:id="@+id/tvLogout"
         android:layout_width="261dp"
         android:layout_height="45dp"
         android:text="logout"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="525dp" />
+        android:layout_gravity="center" />
 
 </LinearLayout>

@@ -131,6 +131,7 @@
         android:id="@+id/progressBar4"
         style="?android:attr/progressBarStyle"
         android:layout_width="173dp"
-        android:layout_height="164dp" />
+        android:layout_height="164dp"
+        android:indeterminateDrawable="@drawable/progressb" />
 
 </RelativeLayout>
