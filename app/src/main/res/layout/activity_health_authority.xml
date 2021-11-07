@@ -3,129 +3,140 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/lvPosts">
+    android:id="@+id/lvPosts"
+    android:background="@color/bgColor">
 
     <RelativeLayout
         android:id="@+id/insideContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/fraser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25pt"
-            android:layout_marginTop="100pt"
-            android:text="Fraser: "
-            android:textSize="24sp" />
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/sbgColor">
+
+            <TextView
+                android:id="@+id/fraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8pt"
+                android:layout_marginTop="100pt"
+                android:text="Fraser: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
 
-        <TextView
-            android:id="@+id/interior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/fraser"
-            android:layout_centerHorizontal="false"
-            android:layout_marginStart="25pt"
-            android:text="Interior: "
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/interior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fraser"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="8pt"
+                android:text="Interior: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/northern"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/interior"
-            android:layout_marginStart="25pt"
-            android:text="Northern: "
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/northern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/interior"
+                android:layout_marginStart="8pt"
+                android:text="Northern: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/outside"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/northern"
-            android:layout_marginStart="25pt"
-            android:text="Out of Canada: "
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/outside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/northern"
+                android:layout_marginStart="8pt"
+                android:text="Out of Canada: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/coastal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/outside"
-            android:layout_marginStart="25pt"
-            android:text="Vancouver Coastal: "
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/coastal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/outside"
+                android:layout_marginStart="8pt"
+                android:text="Vancouver Coastal: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/island"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/coastal"
-            android:layout_marginStart="25pt"
-            android:text="Vancouver Island: "
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/island"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coastal"
+                android:layout_marginStart="8pt"
+                android:text="Vancouver Island: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/fraserCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="100pt"
-            android:layout_toEndOf="@id/fraser"
-            android:textSize="24sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/interiorCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/fraserCount"
-            android:layout_toEndOf="@id/interior"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/fraserCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="100pt"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/northernCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/interiorCount"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/northern"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/interiorCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fraserCount"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/outsideCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/northernCount"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/outside"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/northernCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/interiorCount"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/coastalCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/outsideCount"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/coastal"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/outsideCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/northernCount"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/islandCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/coastalCount"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/island"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/coastalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/outsideCount"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/islandCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coastalCount"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <ProgressBar

@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".month_Year"
     android:orientation="vertical"
-    android:id="@+id/lvPosts">
+    android:id="@+id/lvPosts"
+    android:background="@color/bgColor">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,8 +23,9 @@
             android:hint="@string/year"
             android:inputType="number"
             android:maxLength="4"
-            android:textSize="8pt"
-            android:autofillHints="" />
+            android:autofillHints=""
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
 
         <EditText
             android:id="@+id/search_month"
@@ -34,8 +36,9 @@
             android:hint="@string/month"
             android:inputType="number"
             android:maxLength="2"
-            android:textSize="8pt"
-            android:autofillHints="" />
+            android:autofillHints=""
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btnSearch"
@@ -43,7 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/button_find"
-            android:textSize="8pt"/>
+            android:background="@drawable/button_select"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
 
         <ProgressBar
             android:id="@+id/progressBar"

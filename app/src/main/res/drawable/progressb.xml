@@ -13,7 +13,7 @@ android:innerRadiusRatio="3"
 android:centerColor="#FFC107"
     android:centerY="0.50"
     android:endColor="#FF9800"
-    android:startColor="#FF5722"
+    android:startColor="#FA672C"
     android:type="sweep"
     android:useLevel="false" />
     </shape>
