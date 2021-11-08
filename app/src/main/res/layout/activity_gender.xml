@@ -68,14 +68,5 @@
             android:layout_toEndOf="@id/unknownCount"
             android:textSize="24sp" />
     </RelativeLayout>
-        <ProgressBar
-            android:id="@+id/progressBar3"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="50pt"
-            android:layout_marginHorizontal="50pt"
-            android:indeterminateDrawable="@drawable/progressb"/>
-
 
 </RelativeLayout>
