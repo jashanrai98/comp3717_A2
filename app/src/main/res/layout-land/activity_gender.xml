@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50pt"
-            android:layout_marginTop="80pt"
+            android:layout_marginTop="60pt"
             android:text="Male: "
             android:textSize="24sp" />
 
@@ -42,16 +42,16 @@
 
         <TextView
             android:id="@+id/maleCountValue"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="80pt"
-            android:layout_toEndOf="@id/maleCount"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="138dp"
+            android:layout_toRightOf="@id/maleCount"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/femaleCountValue"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/maleCountValue"
             android:layout_marginStart="21dp"
@@ -61,7 +61,7 @@
 
         <TextView
             android:id="@+id/unknownCountValue"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/femaleCountValue"
             android:layout_marginTop="4pt"

@@ -29,5 +29,7 @@
     <string name="eightyTo">80 - 89: </string>
     <string name="ninetyTo">90+: </string>
     <string name="waitMessage">Please wait while we fetch the data!</string>
+    <string name="logout">Logout</string>
+
 
 </resources>

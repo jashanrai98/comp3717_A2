@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25pt"
-            android:layout_marginTop="100pt"
+            android:layout_marginTop="80dp"
             android:text="Fraser: "
             android:textSize="24sp" />
 
@@ -68,16 +68,16 @@
 
         <TextView
             android:id="@+id/fraserCount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="100pt"
+            android:layout_marginTop="80dp"
             android:layout_toEndOf="@id/fraser"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/interiorCount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/fraserCount"
             android:layout_toEndOf="@id/interior"
@@ -85,45 +85,37 @@
 
         <TextView
             android:id="@+id/northernCount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/interiorCount"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_toEndOf="@id/northern"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/outsideCount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/northernCount"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_toEndOf="@id/outside"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/coastalCount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/outsideCount"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_toEndOf="@id/coastal"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/islandCount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/coastalCount"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_toEndOf="@id/island"
             android:textSize="24sp" />
     </RelativeLayout>

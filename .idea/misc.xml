@@ -9,6 +9,12 @@
         <entry key="..\:/Users/qinsh/Documents/GitHub/comp3717_A2/app/src/main/res/layout/activity_login.xml" value="0.18819655521783182" />
         <entry key="..\:/Users/qinsh/Documents/GitHub/comp3717_A2/app/src/main/res/layout/activity_main.xml" value="0.18819655521783182" />
         <entry key="app/src/main/res/drawable/progressb.xml" value="0.2984375" />
+        <entry key="app/src/main/res/layout-land/activity_age_group.xml" value="0.335" />
+        <entry key="app/src/main/res/layout-land/activity_gender.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/layout-land/activity_health_authority.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/layout-land/activity_login.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout-land/list.xml" value="0.16197916666666667" />
         <entry key="app/src/main/res/layout/activity_age_group.xml" value="0.27794871794871795" />
         <entry key="app/src/main/res/layout/activity_gender.xml" value="0.2139967582071126" />
         <entry key="app/src/main/res/layout/activity_health_authority.xml" value="0.28229166666666666" />
