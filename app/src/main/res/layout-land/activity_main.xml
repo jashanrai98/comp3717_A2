@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
+    android:background="@color/bgColor"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="3pt"
         android:text="@string/homepage_Names_jashan"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <TextView
@@ -23,49 +24,61 @@
         android:layout_gravity="center"
         android:layout_marginVertical="5pt"
         android:text="@string/homepage_Names_lillian"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/monthYear"
-        android:layout_width="268dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
+        android:background="@drawable/button_select"
         android:onClick="startMonthYear"
         android:text="@string/button_month_year"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="308dp" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/ha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginVertical="5pt"
+        android:background="@drawable/button_select"
         android:onClick="startHA"
-        android:text="@string/button_health_authority" />
+        android:text="@string/button_health_authority"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/gender"
-        android:layout_width="263dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
+        android:background="@drawable/button_select"
         android:onClick="startGender"
-        android:text="@string/button_gender" />
+        android:text="@string/button_gender"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/ageGroup"
-        android:layout_width="261dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginVertical="5pt"
+        android:background="@drawable/button_select"
         android:onClick="startAgeGroup"
-        android:text="@string/button_age_group" />
+        android:text="@string/button_age_group"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/tvLogout"
-        android:layout_width="261dp"
+        android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:text="@string/logout" />
 
     <ProgressBar

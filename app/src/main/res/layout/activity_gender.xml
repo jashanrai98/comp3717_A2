@@ -18,7 +18,8 @@
             android:layout_marginStart="50pt"
             android:layout_marginTop="80pt"
             android:text="Male: "
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
 
 
         <TextView
@@ -29,7 +30,8 @@
             android:layout_marginStart="50pt"
             android:layout_marginTop="4pt"
             android:text="Female: "
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/unknownCount"
@@ -39,7 +41,8 @@
             android:layout_marginStart="50pt"
             android:layout_marginTop="4pt"
             android:text="Unknown: "
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/maleCountValue"
@@ -48,7 +51,8 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="80pt"
             android:layout_toEndOf="@id/maleCount"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/femaleCountValue"
@@ -58,7 +62,8 @@
             android:layout_marginStart="21dp"
             android:layout_marginTop="4pt"
             android:layout_toEndOf="@id/femaleCount"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/unknownCountValue"
@@ -67,7 +72,8 @@
             android:layout_below="@id/femaleCountValue"
             android:layout_marginTop="4pt"
             android:layout_toEndOf="@id/unknownCount"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
     </RelativeLayout>
 
 </RelativeLayout>

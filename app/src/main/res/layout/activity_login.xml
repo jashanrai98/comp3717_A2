@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,16 +17,20 @@
         android:text="@string/login_Email"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/userEmail"
         android:layout_width="195dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginStart="159dp"
         android:layout_marginTop="192dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/login_textView2"
@@ -36,44 +41,49 @@
         android:text="@string/login_password"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/userPassword"
         android:layout_width="191dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginStart="160dp"
         android:layout_marginTop="256dp"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/login_button1"
         android:layout_width="270dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginTop="330dp"
+        android:background="@drawable/button_select"
         android:text="@string/button_login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/button_select"
-        android:textColor="@color/white"
-        android:textSize="20sp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/login_button2"
         android:layout_width="270dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginTop="386dp"
+        android:background="@drawable/button_select"
         android:text="@string/button_signup"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/button_select"
-        android:textColor="@color/white"
-        android:textSize="20sp"/>
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ProgressBar
         android:id="@+id/progressBar"

@@ -3,124 +3,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="60pt"
+    android:background="@color/bgColor"
     android:orientation="vertical"
-<<<<<<< HEAD
-    tools:context=".MainActivity"
-    android:background="@color/bgColor">
-=======
     tools:context=".MainActivity">
->>>>>>> 348bda5 (added landscape layouts)
 
     <TextView
         android:id="@+id/jashanInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/homepage_Names_jashan"
-<<<<<<< HEAD
         android:layout_marginTop="70pt"
-        android:layout_gravity="center"
+        android:text="@string/homepage_Names_jashan"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
-=======
         android:textSize="20sp" />
->>>>>>> 348bda5 (added landscape layouts)
 
     <TextView
         android:id="@+id/lillianInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:text="@string/homepage_Names_lillian"
         android:layout_gravity="center"
         android:layout_marginVertical="5pt"
+        android:text="@string/homepage_Names_lillian"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
-=======
-        android:layout_gravity="center"
-        android:layout_marginVertical="5pt"
-        android:text="@string/homepage_Names_lillian"
         android:textSize="20sp" />
->>>>>>> 348bda5 (added landscape layouts)
 
     <Button
         android:id="@+id/monthYear"
-        android:layout_width="268dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
+        android:background="@drawable/button_select"
         android:onClick="startMonthYear"
         android:text="@string/button_month_year"
-<<<<<<< HEAD
-        android:onClick="startMonthYear"
-        android:layout_gravity="center"
-        android:background="@drawable/button_select"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
-=======
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="308dp" />
->>>>>>> 348bda5 (added landscape layouts)
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/ha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginVertical="5pt"
-<<<<<<< HEAD
         android:background="@drawable/button_select"
-        android:textColor="@color/white"
-        android:textSize="20sp"/>
-=======
         android:onClick="startHA"
-        android:text="@string/button_health_authority" />
->>>>>>> 348bda5 (added landscape layouts)
+        android:text="@string/button_health_authority"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/gender"
-        android:layout_width="263dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:onClick="startGender"
-<<<<<<< HEAD
-        android:text="@string/button_gender"
-        android:layout_gravity="center"
         android:background="@drawable/button_select"
+        android:onClick="startGender"
+        android:text="@string/button_gender"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
-=======
-        android:text="@string/button_gender" />
->>>>>>> 348bda5 (added landscape layouts)
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/ageGroup"
-        android:layout_width="261dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginVertical="5pt"
-<<<<<<< HEAD
         android:background="@drawable/button_select"
-        android:textColor="@color/white"
-        android:textSize="20sp"/>
-    <Button
-        android:id="@+id/tvLogout"
-        android:layout_width="330dp"
-        android:layout_height="45dp"
-        android:text="logout"
-        android:layout_gravity="center" />
-=======
         android:onClick="startAgeGroup"
-        android:text="@string/button_age_group" />
+        android:text="@string/button_age_group"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/tvLogout"
-        android:layout_width="261dp"
+        android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="@string/logout" />
 
->>>>>>> 348bda5 (added landscape layouts)
     <ProgressBar
         android:id="@+id/progressBar5"
         style="?android:attr/progressBarStyle"
