@@ -36,7 +36,7 @@ public class month_Year extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_month_year);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar1);
         databasePost = FirebaseDatabase.getInstance().getReference();
         personsList = findViewById(R.id.showList);
         personsList.setLayoutManager(new LinearLayoutManager(this,
