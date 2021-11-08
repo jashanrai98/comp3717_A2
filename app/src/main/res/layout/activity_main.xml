@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/bgColor">
+    android:layout_marginTop="60pt">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/jashanInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/homepage_Names_jashan"
@@ -18,7 +18,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/lillianInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/homepage_Names_lillian"
@@ -28,9 +28,9 @@
         android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="330dp"
-        android:layout_height="45dp"
+        android:id="@+id/monthYear"
+        android:layout_width="268dp"
+        android:layout_height="47dp"
         android:text="@string/button_month_year"
         android:onClick="startMonthYear"
         android:layout_gravity="center"
@@ -39,9 +39,9 @@
         android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="330dp"
-        android:layout_height="45dp"
+        android:id="@+id/ha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/button_health_authority"
         android:onClick="startHA"
         android:layout_gravity="center"
@@ -51,8 +51,8 @@
         android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="330dp"
+        android:id="@+id/gender"
+        android:layout_width="263dp"
         android:layout_height="45dp"
         android:onClick="startGender"
         android:text="@string/button_gender"
@@ -62,8 +62,8 @@
         android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="330dp"
+        android:id="@+id/ageGroup"
+        android:layout_width="261dp"
         android:layout_height="45dp"
         android:onClick="startAgeGroup"
         android:text="@string/button_age_group"
@@ -77,9 +77,20 @@
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:text="logout"
-        android:layout_gravity="center"
-        android:background="@drawable/button_select"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
+        android:layout_gravity="center" />
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="200dp"/>
+    <TextView
+        android:id="@+id/waitMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/waitMessage"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        />
 </LinearLayout>

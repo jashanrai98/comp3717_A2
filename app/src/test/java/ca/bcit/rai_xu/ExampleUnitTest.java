@@ -1,4 +1,4 @@
-package ca.bcit.rai_a2;
+package ca.bcit.rai_xu;
 
 import org.junit.Test;
 

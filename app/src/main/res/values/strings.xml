@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rai_A2</string>
+    <string name="app_name">Rai_Xu</string>
     <string name="homepage_Names_jashan">Jashan Rai (A01185336)</string>
     <string name="homepage_Names_lillian">Lillian Xu (A01233266)</string>
     <string name="button_month_year">Cases by Month and Year</string>
@@ -13,11 +13,11 @@
     <string name="login_password">Password</string>
     <string name="button_login">Login</string>
     <string name="button_signup">Signup</string>
-    <string name="date">Reported_Date</string>
-    <string name="ha">HA</string>
-    <string name="sex">Sex</string>
-    <string name="age">Age_Group</string>
-    <string name="classification">Classification_Reported</string>
+    <string name="date">Reported_Date: </string>
+    <string name="ha">Health Authority: </string>
+    <string name="sex">Sex: </string>
+    <string name="age">Age Group: </string>
+    <string name="classification">Classification_Reported: </string>
     <string name="Less10">Less than 10: </string>
     <string name="tenTo">10 - 19: </string>
     <string name="twentyTo">20 - 29: </string>
@@ -28,4 +28,6 @@
     <string name="seventyTo">70 - 79: </string>
     <string name="eightyTo">80 - 89: </string>
     <string name="ninetyTo">90+: </string>
+    <string name="waitMessage">Please wait while we fetch the data!</string>
+
 </resources>

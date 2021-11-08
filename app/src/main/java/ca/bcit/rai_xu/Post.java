@@ -1,10 +1,35 @@
-package ca.bcit.rai_a2;
+package ca.bcit.rai_xu;
 
-public class Post {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Post implements Serializable, Parcelable {
     String Age_Group;
     String Classification_Reported;
     String HA;
     String Reported_Date;
+
+    protected Post(Parcel in) {
+        Age_Group = in.readString();
+        Classification_Reported = in.readString();
+        HA = in.readString();
+        Reported_Date = in.readString();
+        Sex = in.readString();
+    }
+
+    public static final Creator<Post> CREATOR = new Creator<Post>() {
+        @Override
+        public Post createFromParcel(Parcel in) {
+            return new Post(in);
+        }
+
+        @Override
+        public Post[] newArray(int size) {
+            return new Post[size];
+        }
+    };
 
     public String getAge_Group() {
         return Age_Group;
@@ -60,4 +85,17 @@ public class Post {
         this.Sex = Sex;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(Age_Group);
+        parcel.writeString(Classification_Reported);
+        parcel.writeString(HA);
+        parcel.writeString(Reported_Date);
+        parcel.writeString(Sex);
+    }
 }

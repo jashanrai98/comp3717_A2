@@ -139,13 +139,4 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar4"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40pt"
-        android:indeterminateDrawable="@drawable/progressb" />
-
 </RelativeLayout>

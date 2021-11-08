@@ -231,12 +231,4 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="163dp"
-        android:layout_height="110dp"
-        android:layout_marginHorizontal="55pt"
-        android:indeterminateDrawable="@drawable/progressb" />
-
 </LinearLayout>
