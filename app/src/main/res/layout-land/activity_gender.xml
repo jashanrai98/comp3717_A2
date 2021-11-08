@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lvPosts">
+
+    <RelativeLayout
+        android:id="@+id/insideContainerGender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/maleCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50pt"
+            android:layout_marginTop="80pt"
+            android:text="Male: "
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/femaleCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maleCount"
+            android:layout_marginStart="50pt"
+            android:layout_marginTop="4pt"
+            android:text="Female: "
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/unknownCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/femaleCount"
+            android:layout_marginStart="50pt"
+            android:layout_marginTop="4pt"
+            android:text="Unknown: "
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/maleCountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80pt"
+            android:layout_toEndOf="@id/maleCount"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/femaleCountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maleCountValue"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="4pt"
+            android:layout_toEndOf="@id/femaleCount"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/unknownCountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/femaleCountValue"
+            android:layout_marginTop="4pt"
+            android:layout_toEndOf="@id/unknownCount"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

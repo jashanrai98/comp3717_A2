@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60pt"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/jashanInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/homepage_Names_jashan"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lillianInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="5pt"
+        android:text="@string/homepage_Names_lillian"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/monthYear"
+        android:layout_width="268dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:onClick="startMonthYear"
+        android:text="@string/button_month_year"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <Button
+        android:id="@+id/ha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="5pt"
+        android:onClick="startHA"
+        android:text="@string/button_health_authority" />
+
+    <Button
+        android:id="@+id/gender"
+        android:layout_width="263dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:onClick="startGender"
+        android:text="@string/button_gender" />
+
+    <Button
+        android:id="@+id/ageGroup"
+        android:layout_width="261dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="5pt"
+        android:onClick="startAgeGroup"
+        android:text="@string/button_age_group" />
+
+    <Button
+        android:id="@+id/tvLogout"
+        android:layout_width="261dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:text="@string/logout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/waitMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:text="@string/waitMessage"
+        android:textAlignment="center" />
+</LinearLayout>
