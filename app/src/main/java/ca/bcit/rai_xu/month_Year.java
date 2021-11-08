@@ -1,4 +1,4 @@
-package ca.bcit.rai_a2;
+package ca.bcit.rai_xu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +16,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -32,10 +31,12 @@ public class month_Year extends AppCompatActivity {
     private RecyclerView personsList;
     List<Post> postList = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_month_year);
+        progressBar = findViewById(R.id.progressBar);
         databasePost = FirebaseDatabase.getInstance().getReference();
         personsList = findViewById(R.id.showList);
         personsList.setLayoutManager(new LinearLayoutManager(this,
@@ -46,7 +47,6 @@ public class month_Year extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressBar = findViewById(R.id.progressBar);
                 progressBar.setVisibility(View.VISIBLE);
                 lvPosts = (LinearLayout) findViewById(R.id.lvPosts);
                 editYear.getText().toString();
@@ -54,21 +54,16 @@ public class month_Year extends AppCompatActivity {
                 updateMonthYearCount(postList);
             }
         });
+
     }
     @Override
     protected void onStart() {
         super.onStart();
-        Query myquery = databasePost;
-        myquery.addListenerForSingleValueEvent(new ValueEventListener() {
+        databasePost.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 postList.clear();
-                int a = 0;
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    a++;
-                    if(a>=100){
-                        break;
-                    }
                     Post post = postSnapshot.getValue(Post.class);
                     postList.add(post);
                 }
@@ -88,6 +83,7 @@ public class month_Year extends AppCompatActivity {
                 persons.add(p.get(i));
             }
         }
+        progressBar.setVisibility(View.GONE);
         personsList.setAdapter(new PersonsAdapter(persons));
     }
 

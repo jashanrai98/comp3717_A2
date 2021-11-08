@@ -1,9 +1,7 @@
-package ca.bcit.rai_a2;
+package ca.bcit.rai_xu;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import com.google.firebase.database.core.Repo;
 
 import java.io.Serializable;
 

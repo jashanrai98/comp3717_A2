@@ -1,4 +1,4 @@
-package ca.bcit.rai_a2;
+package ca.bcit.rai_xu;
 
 import android.view.LayoutInflater;
 import android.view.View;

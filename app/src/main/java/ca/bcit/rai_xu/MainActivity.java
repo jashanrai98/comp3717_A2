@@ -1,16 +1,13 @@
-package ca.bcit.rai_a2;
+package ca.bcit.rai_xu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,9 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.gson.Gson;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         ageCount9 = 0;
         ageCount10 = 0;
 
+        // Hide all buttons until data loads.
         ProgressBar progressBar = findViewById(R.id.progressBar5);
         progressBar.setVisibility(View.VISIBLE);
         TextView name1 = findViewById(R.id.jashanInfo);
@@ -186,6 +182,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("northern", Integer.toString(northernCount));
         startActivity(intent);
     }
+
+    //gets the gender count for the gender activity.
     public void updateGenderCount(List<Post> p){
         for (int i = 0; i < p.size(); i++){
             if (p.get(i).getSex().equals("M")){
@@ -197,6 +195,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    //gets the health authority count for the HA activity.
     public void updateHACount(List<Post> p){
         for (int i = 0; i < p.size(); i++){
             if (p.get(i).getHA().equals("Fraser")){
@@ -215,6 +215,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    //gets the age group count for the age group activity.
     public void updateAgeGroupCount(List<Post> p){
         for (int i = 0; i < p.size(); i++){
             if (p.get(i).getAge_Group().equals("<10")){
